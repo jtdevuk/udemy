@@ -19,7 +19,12 @@ body {
   padding: 15px;
   text-decoration: none;
   color: black;
+  opacity: 0.7;
   flex-shrink: 0;
+}
+
+.nav-link:hover {
+  color: #7DB7C1;
 }
 
 .search-bar-container {
@@ -42,6 +47,7 @@ body {
   position: absolute;
   top: 14px;
   left: 15px;
+  opacity: 0.7;
 }
 
 #navbar-logo {
@@ -85,10 +91,11 @@ body {
   align-items: center;
 }
 
+/* Lower Navbar */
 .lower-navbar {
   display: flex;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
   background-color: white;
   height: 45px;
   font-size: 14px;
@@ -97,8 +104,34 @@ body {
 
 .lower-navbar-links {  
   display: flex;
-  justify-content: space-between;
-  width: 1100px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+}
+
+.nav-link-lower {
+  padding: 15px 10px;
+}
+
+/* Subcategory Navbar */
+.subcategory-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  max-width: 100%;
+  height: 40px;
+}
+
+.subcategory-navbar-link {
+  color: white;
+  opacity: 1;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Media queries */
@@ -147,5 +180,9 @@ body {
 
   #small-search-icon {
     display: inline-block;
+  }
+
+  .lower-navbar {
+    display: none;
   }
 }
